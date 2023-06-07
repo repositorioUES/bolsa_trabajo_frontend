@@ -1,21 +1,23 @@
 import {Component, OnInit} from '@angular/core';
-import {UserService} from "../../services/user.service";
-import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {UserService} from "../../services/user/user.service";
+import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'registro',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
-export class RegistroComponent /*implements OnInit*/ {
+export class RegistroComponent implements OnInit {
 
-  /*
+
   public user = {
     username : '',
     password : '',
-    email : ''
+    emailUsuario : ''
   }
-  constructor(private userService:UserService) { }
+
+
+  constructor(private userService:UserService, private snack:MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -23,22 +25,31 @@ export class RegistroComponent /*implements OnInit*/ {
   formSubmit(){
     console.log(this.user);
     if(this.user.username == '' || this.user.username == null){
-      alert('El nombre del usuario es requerido')
-
+      this.snack.open('El nombre de usuario es requerido !!','Aceptar',{
+        duration : 3000,
+        verticalPosition : 'top',
+        horizontalPosition : 'right'
+      });
       return;
     }
 
     this.userService.añadirUsuario(this.user).subscribe(
       (data) => {
         console.log(data);
-        alert('Usuario guardado con exito')
+        this.snack.open('Usuario guardado con exito','Aceptar',{
+          duration : 3000,
+          verticalPosition : 'top',
+          horizontalPosition : 'right'
+        });
       },(error) => {
-        console.log(error);
-        alert('Error en el sistema')
+        this.snack.open('Verifique campos requeridos','Aceptar',{
+          duration : 3000,
+          verticalPosition : 'top',
+          horizontalPosition : 'right'
+        });
       }
     )
   }
 
-   */
 
 }
