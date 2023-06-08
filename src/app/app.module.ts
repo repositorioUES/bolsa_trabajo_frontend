@@ -15,6 +15,12 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 
+
+/*
+* Interceptores
+*/
+import {authInterceptorProviders} from "./services/auth.interceptor";
+
 /*
 * Componentes de Angular Material
 */
@@ -25,6 +31,12 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCardModule} from "@angular/material/card";
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from "@angular/material/icon";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import { AdministradorDashboardComponent } from './pages/Roles/Administrador/administrador-dashboard/administrador-dashboard.component';
+import { AspiranteDashboardComponent } from './pages/Roles/Aspirante/aspirante-dashboard/aspirante-dashboard.component';
+import { EmpresaDashboardComponent } from './pages/Roles/Empresa/empresa-dashboard/empresa-dashboard.component';
+import { InvitadoDashboardComponent } from './pages/Roles/Invitado/invitado-dashboard/invitado-dashboard.component';
+
 
 
 
@@ -38,7 +50,11 @@ import {MatIconModule} from "@angular/material/icon";
     NavbarComponent,
     RegistroComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AdministradorDashboardComponent,
+    AspiranteDashboardComponent,
+    EmpresaDashboardComponent,
+    InvitadoDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -52,9 +68,10 @@ import {MatIconModule} from "@angular/material/icon";
     MatSnackBarModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatTooltipModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 
