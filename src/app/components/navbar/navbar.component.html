@@ -1,27 +1,30 @@
 <mat-toolbar color="warn">
-  <a [routerLink]="'/'"
-     mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon" matTooltip="Ir a inicio">
-    <mat-icon>handshake</mat-icon>
-  </a>
-  <span>HireLink</span>
+    <a [routerLink]="'/'" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon" matTooltip="Ir a inicio">
+        <mat-icon>handshake</mat-icon>
+    </a>
+    <span>HireLink</span>
 
-  <span class="example-spacer"></span>
+    <a [routerLink]="'/empresas'" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon" matTooltip="Ver empresas">
+        <span>Empresas</span>
+    </a>
+    <a [routerLink]="'/ofertas'" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon" matTooltip="Ver ofertas">
+        <span>Ofertas</span>
+    </a>
+    <span class="example-spacer"></span>
 
-  <a [routerLink]="'/login'"
-     mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" matTooltip="Iniciar sesión">
-    <mat-icon>person</mat-icon>
-  </a>
-
-
-  <a [routerLink]="'/registrar'"
-     mat-icon-button class="example-icon favorite-icon mr5 ml10" aria-label="Example icon-button with heart icon" matTooltip="Registrar">
-    <mat-icon>person_add</mat-icon>
-  </a>
+    <a [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" matTooltip="Iniciar sesión">
+        <mat-icon>person</mat-icon>
+    </a>
 
 
-  <a mat-icon-button class="example-icon favorite-icon mr5 ml10" aria-label="Example icon-button with heart icon" matTooltip="Cerrar sesión">
-    <mat-icon>logout</mat-icon>
-  </a>
+    <a [routerLink]="'/registrar'" mat-icon-button class="example-icon favorite-icon mr5 ml10" aria-label="Example icon-button with heart icon" matTooltip="Registrar">
+        <mat-icon>person_add</mat-icon>
+    </a>
+
+
+    <a mat-icon-button class="example-icon favorite-icon mr5 ml10" aria-label="Example icon-button with heart icon" matTooltip="Cerrar sesión">
+        <mat-icon>logout</mat-icon>
+    </a>
 
 
 </mat-toolbar>

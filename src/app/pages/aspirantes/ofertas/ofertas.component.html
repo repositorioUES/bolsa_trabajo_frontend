@@ -1,0 +1,38 @@
+<p>ofertas works!</p>
+
+
+<div class="container">
+    <div class="card bg-light mb-3">
+        <!-- style="max-width: 18rem;" -->
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            <h5 class="card-title">Light card title</h5>
+
+            <div class="input-group mb-3">
+
+                <input type="text" [(ngModel)]="filterBy" placeholder="seach by name" (keyup)="filter()" class="form-control">
+            </div>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>nombre</th>
+                        <th>rango</th>
+                        <th>empresa</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ofer of filteredOfertas">
+                        <td>{{ofer.nombre}}</td>
+                        <td>{{ofer.rango_salarial}}</td>
+                        <td>{{ofer.ubicacion.nombre }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</div>
