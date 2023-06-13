@@ -1,1 +1,78 @@
 <p>info-aspi works!</p>
+
+<div class="container">
+    <div class="card bg-light mb-3">
+        <!-- style="max-width: 18rem;" -->
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            <h5 class="card-title">Light card title</h5>
+
+
+            <div class="form-group">
+                <label>email</label>
+                <input type="text" class="form-control" id="" placeholder="Nombre" [(ngModel)]="aspi.email">
+            </div>
+            <div class="form-group">
+                <label>fecha_nacimiento</label>
+                <input type="date" class="form-control" id="" placeholder="fecha_nacimiento" [(ngModel)]="aspi.fecha_nacimiento">
+            </div>
+            <div class="form-group">
+                <label>nit</label>
+                <input type="number" class="form-control" id="" placeholder="nit" [(ngModel)]="aspi.nit">
+            </div>
+            <div class="form-group">
+                <label>numero_documento_identidad</label>
+                <input type="number" class="form-control" id="" placeholder="numero_documento_identidad" [(ngModel)]="aspi.numero_documento_identidad">
+            </div>
+            <div class="form-group">
+                <label>nup</label>
+                <input type="number" class="form-control" id="" placeholder="nup" [(ngModel)]="aspi.nup">
+            </div>
+            <div class="form-group">
+                <label>primer_apellido</label>
+                <input type="text" class="form-control" id="" placeholder="primer_apellido" [(ngModel)]="aspi.primer_apellido">
+            </div>
+            <div class="form-group">
+                <label>primer_nombre</label>
+                <input type="text" class="form-control" id="" placeholder="primer_nombre" [(ngModel)]="aspi.primer_nombre">
+            </div>
+            <div class="form-group">
+                <label>redes_sociales</label>
+                <input type="text" class="form-control" id="" placeholder="redes_sociales" [(ngModel)]="aspi.redes_sociales">
+            </div>
+            <div class="form-group">
+                <label>segundo_apellido</label>
+                <input type="text" class="form-control" id="" placeholder="segundo_apellido" [(ngModel)]="aspi.segundo_apellido">
+            </div>
+            <div class="form-group">
+                <label>segundo_nombre</label>
+                <input type="text" class="form-control" id="" placeholder="segundo_nombre" [(ngModel)]="aspi.segundo_nombre">
+            </div>
+            <div class="form-group">
+                <label>telefono_casa</label>
+                <input type="number" class="form-control" id="" placeholder="telefono_casa" [(ngModel)]="aspi.telefono_casa">
+            </div>
+            <div class="form-group">
+                <label>telefono_personal</label>
+                <input type="number" class="form-control" id="" placeholder="telefono_personal" [(ngModel)]="aspi.telefono_personal">
+            </div>
+            <div class="form-group">
+                <label>tipo_documento</label>
+                <input type="text" class="form-control" id="" placeholder="tipo_documento" [(ngModel)]="aspi.tipo_documento">
+            </div>
+            <div class="form-group">
+                <label>genero_id</label>
+                <input type="number" class="form-control" id="" placeholder="genero_id" [(ngModel)]="aspi.genero">
+            </div>
+            <div class="form-group">
+                <label>usuario_id</label>
+                <input type="number" class="form-control" id="" placeholder="usuario_id" [(ngModel)]="aspi.usuario">
+            </div>
+            <button class="btn btn-success" role="button" (click)='create()'>Guardar info</button>
+
+
+
+        </div>
+    </div>
+
+</div>
