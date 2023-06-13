@@ -4,7 +4,13 @@
     <mat-icon>handshake</mat-icon>
   </a>
   <span>HireLink</span>
-
+  <a [routerLink]="'/empresas'" style="margin-right: 70px" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon" matTooltip="Ver empresas">
+    <span>Empresas</span>
+  </a>
+  <a [routerLink]="'/ofertas'" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon" matTooltip="Ver ofertas">
+    <span>Ofertas</span>
+  </a>
+  <span class="example-spacer"></span>
   <span class="example-spacer"></span>
 
   <a *ngIf = "!isLoggedIn"
