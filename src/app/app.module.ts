@@ -36,10 +36,6 @@ import { AdministradorDashboardComponent } from './pages/Roles/Administrador/adm
 import { AspiranteDashboardComponent } from './pages/Roles/Aspirante/aspirante-dashboard/aspirante-dashboard.component';
 import { EmpresaDashboardComponent } from './pages/Roles/Empresa/empresa-dashboard/empresa-dashboard.component';
 import { InvitadoDashboardComponent } from './pages/Roles/Invitado/invitado-dashboard/invitado-dashboard.component';
-import { ListEmpresasComponent } from './pages/aspirantes/list-empresas/list-empresas.component';
-import { CommonModule } from '@angular/common';
-import { OfertasComponent } from './pages/aspirantes/ofertas/ofertas.component';
-import { InfoAspiComponent } from './pages/aspirantes/info-aspi/info-aspi.component';
 
 
 
@@ -58,13 +54,10 @@ import { InfoAspiComponent } from './pages/aspirantes/info-aspi/info-aspi.compon
     AdministradorDashboardComponent,
     AspiranteDashboardComponent,
     EmpresaDashboardComponent,
-    InvitadoDashboardComponent,
-    ListEmpresasComponent,
-    OfertasComponent,
-    InfoAspiComponent
+    InvitadoDashboardComponent
   ],
   imports: [
-    BrowserModule,CommonModule,
+    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from "../../services/user/user.service";
 import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'registro',
@@ -17,7 +18,7 @@ export class RegistroComponent implements OnInit {
   }
 
 
-  constructor(private userService:UserService, private snack:MatSnackBar) { }
+  constructor(private userService:UserService, private snack:MatSnackBar,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -36,6 +37,7 @@ export class RegistroComponent implements OnInit {
     this.userService.añadirUsuario(this.user).subscribe(
       (data) => {
         console.log(data);
+        this.router.navigate(['login']);
         this.snack.open('Usuario guardado con exito','Aceptar',{
           duration : 3000,
           verticalPosition : 'top',
