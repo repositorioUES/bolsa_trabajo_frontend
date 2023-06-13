@@ -43,20 +43,24 @@ export class LoginComponent implements OnInit{
           console.log(user);
 
           if(this.loginService.getUserRole() == 'ADMINISTRADOR'){
-            //dashboard admin
-            window.location.href = '/administrador';
+            //dashboard administrador
+            this.router.navigate(['administrador']);
+            this.loginService.loginStatusSubjec.next(true);
 
           }else if(this.loginService.getUserRole() == 'ASPIRANTE'){
             // dashboard aspirante
-            window.location.href = '/aspirante';
+            this.router.navigate(['aspirante']);
+            this.loginService.loginStatusSubjec.next(true);
 
           }else if(this.loginService.getUserRole() == 'EMPRESA'){
             // dashboard empresa
-            window.location.href = '/empresa';
+            this.router.navigate(['empresa']);
+            this.loginService.loginStatusSubjec.next(true);
 
           }else if(this.loginService.getUserRole() == 'INVITADO') {
-            // dashboard empresa
-            window.location.href = '/invitado';
+            // dashboard invitado
+            this.router.navigate(['invitado']);
+            this.loginService.loginStatusSubjec.next(true);
 
           }else{
             this.loginService.logout();
@@ -65,7 +69,7 @@ export class LoginComponent implements OnInit{
         })
       },(error) => {
         console.log(error);
-        this.snack.open('Detalles inválidos , vuelva a intentar !!','Aceptar',{
+        this.snack.open('Datos inválidos , vuelva a intentar !!','Aceptar',{
           duration:3000
         })
       }
